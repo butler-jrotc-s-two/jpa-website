@@ -1,0 +1,14 @@
+<h1>Questions</h1>
+<ol>
+  <% @questions.each do |question| %>
+    <br>
+    <li>
+      <h3><%= question.question %></h3>
+      <p><%= question.answer %></p>
+      <p><%= question.false_answers %></p>
+      <p><%= question.category.name %></p>
+    </li>
+  <% end %>
+</ol>
+<br>
+<%= link_to 'New Question', new_question_path %>

@@ -1,0 +1,9 @@
+<h1>Question Formats</h1>
+<ol>
+  <% @question_formats.each do |question_format| %>
+    <br>
+    <li><%= question_format.name %></li>
+  <% end %>
+</ol>
+<br>
+<%= link_to 'New question format', new_question_format_path %>

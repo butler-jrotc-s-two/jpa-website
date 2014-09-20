@@ -1,0 +1,9 @@
+<h1>New Question</h1>
+<%= form_for @question do |f| %>
+  <%= f.select :category_id, options_for_select(category_options) %>
+  <%= f.text_field :question,       placeholder: "enter your question" %>
+  <%= f.text_field :answer,         placeholder: "answer to question" %>
+  <%= f.text_field :false_answers,  placeholder: "false answers separated by commas" %>
+  
+  <p><%= f.submit 'Create' %></p>
+<% end %>
